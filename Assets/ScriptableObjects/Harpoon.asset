@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41e27824526ac74999144e7a3dbf626, type: 3}
+  m_Name: Harpoon
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
+  displayName: Harpoon
+  description: Polearm with a serrated spearhead. Allows spearfishing.
+  sprite: {fileID: 1516983177, guid: 357a8216a23391d4c9b23fe836244799, type: 3}
+  price: 300
