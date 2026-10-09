@@ -315,6 +315,7 @@ MonoBehaviour:
   hoverRotationAmount: 1
   widthFullRotation: 300
   animationSpeedScale: 1
+  targetTransform: {fileID: 0}
 --- !u!114 &7022973432592639749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonAudioComponent
   audioSource: {fileID: 0}
   hoverSound: {fileID: 8300000, guid: e4d9da0531d212e42bd445354a91b089, type: 3}
-  pressSound: {fileID: 8300000, guid: 5e2611473fb65ce46bb887e30c7ab69a, type: 3}
+  pressSound: {fileID: 0}
 --- !u!1 &8923549036610315059
 GameObject:
   m_ObjectHideFlags: 0

@@ -1234,6 +1234,8 @@ MonoBehaviour:
   - key: SFXVolume
     value: {fileID: 4715412364351537641}
   brightnessSlider: {fileID: 69114822386964871}
+  cursorTexture: {fileID: 2800000, guid: c3c8a84da39de4a4f990d88b7f62b9ac, type: 3}
+  customCursorToggle: {fileID: 2366604440006350904}
   panels:
   - key: 0
     value: {fileID: 8380156039764411850}
@@ -5349,7 +5351,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 0.6
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
