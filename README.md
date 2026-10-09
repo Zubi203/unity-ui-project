@@ -1,8 +1,8 @@
 # Unity UI/UX Tech Demo
-This is a portfolio project made to showcase DOTween UI animations and the Model-View-Controller architecture. It features a simple title screen and a shop menu.
+This is a portfolio project made to showcase DOTween UI animations and the MVC architecture. It features a simple title screen and a shop menu.
 
 ### Key Features
-- MVC architecture to control communication between UI components.
+- Model-View-Controller architecture to control communication between UI components.
 - the Model: a PlayerStatsModel script to store player data. This includes the player inventory and currency.
 - The View: 3 separate view scripts to handle the user-facing display and button logic (UIView, ShopView, InventoryView).
 - The Controller: a UIController script that is responsible for communication connecting methods and events between the Model and the View
@@ -21,4 +21,5 @@ This is a portfolio project made to showcase DOTween UI animations and the Model
 - UI assets: https://cupnooble.itch.io/sprout-lands-ui-pack
 - Inventory and shop icons: https://clockworkraven.itch.io/raven-fantasy-icons
 - Sound Effects: https://jdsherbert.itch.io/ultimate-ui-sfx-pack
+- Music: https://pizzadoggy.itch.io/cozy-tunes
 
