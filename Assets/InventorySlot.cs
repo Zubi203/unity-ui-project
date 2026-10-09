@@ -18,7 +18,7 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
         itemData = item;
 
-        if (amount > 0)
+        if (amount > 0 && itemData != null)
         {
             if (amount == 1)
             {

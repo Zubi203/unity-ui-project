@@ -127,6 +127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8091597468462096034}
   - component: {fileID: 4715412364351537641}
+  - component: {fileID: 1558295780396635313}
   m_Layer: 5
   m_Name: SFXSlider
   m_TagString: Untagged
@@ -207,6 +208,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1558295780396635313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36181472217575480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25ec488e3c5c3946a39db76e795bac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SliderSFXPlayer
+  SFXSliderSound: {fileID: 8300000, guid: 882505e85898842429c272ca2010467b, type: 3}
+  source: {fileID: 438272167106352874}
 --- !u!1 &297557263419797465
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +344,7 @@ MonoBehaviour:
   hoverRotationAmount: 1
   widthFullRotation: 300
   animationSpeedScale: 1
+  targetTransform: {fileID: 0}
 --- !u!1 &674722634325987395
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +513,7 @@ MonoBehaviour:
   hoverRotationAmount: 1
   widthFullRotation: 300
   animationSpeedScale: 1
+  targetTransform: {fileID: 0}
 --- !u!114 &679253592759479283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,6 +835,7 @@ MonoBehaviour:
   hoverRotationAmount: 1
   widthFullRotation: 300
   animationSpeedScale: 1
+  targetTransform: {fileID: 0}
 --- !u!114 &3617314754526940391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1201,6 +1219,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f7cde63201c3e418702900c650c77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsMenu
+  mixers:
+  - key: MasterVolume
+    value: {fileID: 24100000, guid: 2bf57a27fc1981e4d98235b7ba5a4ab2, type: 2}
+  - key: MusicVolume
+    value: {fileID: 24100000, guid: 2bf57a27fc1981e4d98235b7ba5a4ab2, type: 2}
+  - key: SFXVolume
+    value: {fileID: 24100000, guid: 2bf57a27fc1981e4d98235b7ba5a4ab2, type: 2}
+  sliders:
+  - key: MasterVolume
+    value: {fileID: 3369344892590371819}
+  - key: MusicVolume
+    value: {fileID: 5040906963085589981}
+  - key: SFXVolume
+    value: {fileID: 4715412364351537641}
+  brightnessSlider: {fileID: 69114822386964871}
   panels:
   - key: 0
     value: {fileID: 8380156039764411850}
@@ -2187,6 +2220,7 @@ MonoBehaviour:
   hoverRotationAmount: 1
   widthFullRotation: 300
   animationSpeedScale: 1
+  targetTransform: {fileID: 0}
 --- !u!114 &1162994891610539356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2309,6 +2343,7 @@ MonoBehaviour:
   hoverRotationAmount: 1
   widthFullRotation: 300
   animationSpeedScale: 1
+  targetTransform: {fileID: 0}
 --- !u!114 &3868012614626860911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4155,6 +4190,7 @@ MonoBehaviour:
   hoverRotationAmount: 1
   widthFullRotation: 300
   animationSpeedScale: 1
+  targetTransform: {fileID: 0}
 --- !u!114 &4372380077100831448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4629,6 +4665,7 @@ MonoBehaviour:
   hoverRotationAmount: 1
   widthFullRotation: 300
   animationSpeedScale: 1
+  targetTransform: {fileID: 0}
 --- !u!114 &1470260595482788553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5307,11 +5344,11 @@ AudioSource:
   m_GameObject: {fileID: 7183134902357862406}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7427650576521481781, guid: 2bf57a27fc1981e4d98235b7ba5a4ab2, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 1
   m_Pitch: 0.6
   Loop: 0
   Mute: 0

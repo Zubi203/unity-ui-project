@@ -1,19 +1,15 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class title_screen : MonoBehaviour
 {
     public GameObject settingsMenu;
     public GameObject infoScreen;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
+    [SerializeField] private LevelLoader sceneLoader;
 
     public void onPlayButtonPressed()
     {
-        SceneManager.LoadScene("Main");
+        sceneLoader.TransitionToScene("Main");
     }
 
     public void onCreditsButtonPressed()

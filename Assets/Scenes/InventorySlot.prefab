@@ -152,6 +152,8 @@ GameObject:
   - component: {fileID: 7370617793300210599}
   - component: {fileID: 6125252969046276551}
   - component: {fileID: 8648078345840749011}
+  - component: {fileID: 55388822317407597}
+  - component: {fileID: 4365369911452532397}
   m_Layer: 5
   m_Name: InventorySlot
   m_TagString: Untagged
@@ -248,6 +250,42 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &55388822317407597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762719303468605876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 398c1bf7df6801741922d4f296f7f7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimatedButton
+  pivotLocation: 4
+  hoverScaleIncrease: 0.2
+  pressedScaleIncrease: 0.2
+  scaleWithWidth: 1
+  rotateOnHover: 1
+  hoverRotationAmount: 2
+  widthFullRotation: 300
+  animationSpeedScale: 1
+  targetTransform: {fileID: 3686054328045584935}
+--- !u!114 &4365369911452532397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762719303468605876}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ad62f3d6489644cba623bebbe48fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonAudioComponent
+  audioSource: {fileID: 0}
+  hoverSound: {fileID: 8300000, guid: 8a326ab6703d4364cbce6c1b8aa58991, type: 3}
+  pressSound: {fileID: 0}
 --- !u!1 &3886247357000376130
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,9 +519,9 @@ MonoBehaviour:
   pivotLocation: 5
   animType: 0
   slideInDistance: 200
-  duration: 0.15
+  duration: 0.25
   delayAppear: 0
-  fadeInDuration: 0.1
+  fadeInDuration: 0.15
 --- !u!225 &6209579679888610902
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -605,7 +643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

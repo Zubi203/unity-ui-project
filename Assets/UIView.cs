@@ -2,9 +2,9 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using ServiceLocatorPattern;
-using UnityEngine.SceneManagement;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.InputSystem;
 
 public class UIView : MonoBehaviour
 {
@@ -14,6 +14,7 @@ public class UIView : MonoBehaviour
     [SerializeField] private TMP_Text moneyLabel;
     [SerializeField] private int moneyGain = 500;
     [SerializeField] private ParticleSystem moneyParticles;
+    [SerializeField] private LevelLoader sceneLoader;
     Sequence seq;
 
     public event Action<int> AddMoney;
@@ -38,13 +39,15 @@ public class UIView : MonoBehaviour
 
     public void MainMenuButtonPressed()
     {
-        SceneManager.LoadScene("TitleScreen");
+        sceneLoader.TransitionToScene("TitleScreen");
     }
 
     public void AddMoneyButtonPressed()
     {
         AddMoney?.Invoke(moneyGain);
-        moneyParticles?.Play();
+
+        if (moneyParticles == null){return;}
+        moneyParticles.Play();
     }
 
     public void OnMoneyChanged(int amount)

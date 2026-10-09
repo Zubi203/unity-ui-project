@@ -28,19 +28,28 @@ public class AnimatedButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [SerializeField] private float hoverRotationAmount = 1.0f;
     [SerializeField] private float widthFullRotation = 300.0f;
     [SerializeField] private float animationSpeedScale = 1.0f;
+    [SerializeField] private Transform targetTransform = null;
     Sequence sequence;
 
     void Awake()
     {
         baseScale = Vector2.one;
         baseRotationDegrees = transform.rotation.z;
+        
+    }
+
+    void Start()
+    {
+        if (targetTransform == null){
+            targetTransform = transform;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         SetPivot();
 
-        float scaleRatio = Mathf.Clamp(widthFullRotation / GetComponent<RectTransform>().rect.width, 0.5f, 1.0f);
+        float scaleRatio = Mathf.Clamp(widthFullRotation / targetTransform.GetComponent<RectTransform>().rect.width, 0.5f, 1.0f);
         if (!scaleWithWidth)
         {
             scaleRatio = 1.0f;
@@ -52,14 +61,14 @@ public class AnimatedButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             sequence.Kill();
         }
         sequence = DOTween.Sequence();
-        sequence.Append(transform.DOScaleX(scaleTarget.x, animationSpeedScale * 0.2f).SetEase(Ease.OutBack));
-        sequence.Join(transform.DOScaleY(scaleTarget.y, animationSpeedScale * 0.35f).SetEase(Ease.OutBack));
+        sequence.Append(targetTransform.DOScaleX(scaleTarget.x, animationSpeedScale * 0.2f).SetEase(Ease.OutBack));
+        sequence.Join(targetTransform.DOScaleY(scaleTarget.y, animationSpeedScale * 0.35f).SetEase(Ease.OutBack));
 
         if (rotateOnHover) {
             float[] randomRotation = {-hoverRotationAmount, hoverRotationAmount};
             float rot = randomRotation[Random.Range(0, randomRotation.Length)];
-            sequence.Join(transform.DORotate(new Vector3(0.0f, 0.0f, 2.0f * scaleRatio * (baseRotationDegrees + rot)), animationSpeedScale * 0.1f).SetEase(Ease.OutBack));
-            sequence.Join(transform.DORotate(new Vector3(0.0f, 0.0f, baseRotationDegrees), animationSpeedScale * 0.1f).SetEase(Ease.Linear).SetDelay(0.1f * animationSpeedScale));
+            sequence.Join(targetTransform.DORotate(new Vector3(0.0f, 0.0f, 2.0f * scaleRatio * (baseRotationDegrees + rot)), animationSpeedScale * 0.1f).SetEase(Ease.OutBack));
+            sequence.Join(targetTransform.DORotate(new Vector3(0.0f, 0.0f, baseRotationDegrees), animationSpeedScale * 0.1f).SetEase(Ease.Linear).SetDelay(0.1f * animationSpeedScale));
         }
     }
 
@@ -72,15 +81,15 @@ public class AnimatedButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             sequence.Kill();
         }
         sequence = DOTween.Sequence();
-        sequence.Append(transform.DOScale(baseScale, animationSpeedScale * 0.2f).SetEase(Ease.OutExpo));
-        sequence.Join(transform.DORotate(new Vector3(0.0f, 0.0f, baseRotationDegrees), animationSpeedScale * 0.1f).SetEase(Ease.OutExpo));
+        sequence.Append(targetTransform.DOScale(baseScale, animationSpeedScale * 0.2f).SetEase(Ease.OutExpo));
+        sequence.Join(targetTransform.DORotate(new Vector3(0.0f, 0.0f, baseRotationDegrees), animationSpeedScale * 0.1f).SetEase(Ease.OutExpo));
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         SetPivot();
 
-        float scaleRatio = Mathf.Clamp(widthFullRotation / GetComponent<RectTransform>().rect.width, 0.5f, 1.0f);
+        float scaleRatio = Mathf.Clamp(widthFullRotation / targetTransform.GetComponent<RectTransform>().rect.width, 0.5f, 1.0f);
         if (!scaleWithWidth)
         {
             scaleRatio = 1.0f;
@@ -92,15 +101,15 @@ public class AnimatedButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             sequence.Kill();
         }
         sequence = DOTween.Sequence();
-        sequence.Append(transform.DOScaleX(scaleTarget.x, animationSpeedScale * 0.1f).SetEase(Ease.OutBack));
-        sequence.Join(transform.DOScaleY(scaleTarget.y, animationSpeedScale * 0.1f).SetEase(Ease.OutBack));
+        sequence.Append(targetTransform.DOScaleX(scaleTarget.x, animationSpeedScale * 0.1f).SetEase(Ease.OutBack));
+        sequence.Join(targetTransform.DOScaleY(scaleTarget.y, animationSpeedScale * 0.1f).SetEase(Ease.OutBack));
         
-        sequence.Append(transform.DOScale(baseScale, animationSpeedScale * 0.2f).SetEase(Ease.OutExpo));
+        sequence.Append(targetTransform.DOScale(baseScale, animationSpeedScale * 0.2f).SetEase(Ease.OutExpo));
     }
 
     private void SetPivot()
     {
-        RectTransform rect_transform = transform.GetComponent<RectTransform>();
+        RectTransform rect_transform = targetTransform.GetComponent<RectTransform>();
 
         if (rect_transform == null) {return;}
 
