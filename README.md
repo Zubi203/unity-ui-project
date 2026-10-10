@@ -1,3 +1,5 @@
+<img width="1587" height="887" alt="Screenshot 2026-10-10 030743" src="https://github.com/user-attachments/assets/dbd15457-1541-4084-b921-b4c77d4ace65" />
+
 # Unity UI/UX Tech Demo
 This is a portfolio project made to showcase DOTween UI animations and the MVC architecture. It features a simple title screen and a shop menu.
 
@@ -22,4 +24,5 @@ This is a portfolio project made to showcase DOTween UI animations and the MVC a
 - Inventory and shop icons: https://clockworkraven.itch.io/raven-fantasy-icons
 - Sound Effects: https://jdsherbert.itch.io/ultimate-ui-sfx-pack
 - Music: https://pizzadoggy.itch.io/cozy-tunes
+- Shop scene assets: https://quaternius.itch.io/fantasy-props-megakit
 
