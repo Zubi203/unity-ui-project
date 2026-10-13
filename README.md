@@ -26,3 +26,6 @@ This is a portfolio project made to showcase DOTween UI animations and the MVC a
 - Music: https://pizzadoggy.itch.io/cozy-tunes
 - Shop scene assets: https://quaternius.itch.io/fantasy-props-megakit
 
+### Contact
+- Discord: @zubi_dev
+- Work email: zubairhittam@gmail.com
