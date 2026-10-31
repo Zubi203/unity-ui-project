@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class ShopView : MonoBehaviour
 {
     [SerializeField] private List<InventoryItem> shopCollection = new List<InventoryItem>();
-    [SerializeField] private Transform shopItemContainer;
+    [SerializeField] private PooledScrollView scrollView;
 
     public event Action<InventoryItem> TryPurchaseItem;
 
@@ -30,53 +30,17 @@ public class ShopView : MonoBehaviour
         ServiceLocator.Instance.Register(typeof(ShopView), gameObject);
         gameObject.SetActive(false);
 
-        GetShopItemSlots();
-        SetShopItemData();
-    }
-
-    void GetShopItemSlots()
-    {
-        if (shopItemContainer == null || shopItemContainer.childCount <= 0){return;}
-
-        shopItems.Clear();
-
-        for (int i = 0; i < shopItemContainer.childCount; i++)
+        if (scrollView != null)
         {
-            Transform childTransform = shopItemContainer.GetChild(i);
-            ShopItem shopItemChild = childTransform.GetComponent<ShopItem>();
-            shopItems.Add(shopItemChild);
-            shopItemChild.ItemPurchased += BuyButtonPressed;
+            scrollView.Initialize(shopCollection);
         }
     }
 
-    void SetShopItemData()
-    {
-        foreach (InventoryItem item in shopCollection)
-        {
-            AddItem(item);
-        }
-    }
-
-    void AddItem(InventoryItem item)
-    {
-        foreach(ShopItem shopItem in shopItems)
-        {
-            if(shopItem.itemData == null)
-            {
-                shopItem.SetData(item);
-                break;
-            }
-        }
-    }
-
-    void BuyButtonPressed (InventoryItem item)
+    public void BuyButtonPressed (InventoryItem item)
     {
         if (item == null){return;}
 
         TryPurchaseItem?.Invoke(item);
     }
-
-    
-
 
 }

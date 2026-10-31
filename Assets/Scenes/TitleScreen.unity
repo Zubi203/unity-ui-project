@@ -1324,7 +1324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &593657817
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2154,8 +2154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 230, y: -262.54248}
-  m_SizeDelta: {x: 420, y: 50}
+  m_AnchoredPosition: {x: 230, y: -227.54251}
+  m_SizeDelta: {x: 340, y: 71.695}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &851020919
 MonoBehaviour:
@@ -2361,8 +2361,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 230, y: -332.54248}
-  m_SizeDelta: {x: 420, y: 50}
+  m_AnchoredPosition: {x: 230, y: -319.23752}
+  m_SizeDelta: {x: 340, y: 71.695}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &861812710
 MonoBehaviour:
@@ -3366,8 +3366,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 230, y: -122.542496}
-  m_SizeDelta: {x: 420, y: 50}
+  m_AnchoredPosition: {x: 230, y: -135.8475}
+  m_SizeDelta: {x: 340, y: 71.695}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343582853
 MonoBehaviour:
@@ -5116,7 +5116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.15226057, g: 0.19453004, b: 0.3433962, a: 1}
+  m_Color: {r: 0.09643999, g: 0.12815945, b: 0.23773581, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5527,14 +5527,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
   m_Padding:
-    m_Left: 20
-    m_Right: 20
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 60
+    m_Right: 60
+    m_Top: 100
+    m_Bottom: 100
   m_ChildAlignment: 4
   m_Spacing: 20
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
+  m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0

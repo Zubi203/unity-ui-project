@@ -2,9 +2,19 @@ using UnityEngine;
 using TMPro;
 using System;
 using System.Collections.Generic;
+using ServiceLocatorPattern;
 
 public class ShopItem : MonoBehaviour
 {
+
+    private ShopView shopUI
+    {
+        get
+        {
+            return ServiceLocator.Instance.GetService(typeof(ShopView)).GetComponent<ShopView>();
+        }
+
+    }
 
     public InventoryItem itemData;
 
@@ -29,7 +39,7 @@ public class ShopItem : MonoBehaviour
     public void OnBuyButtonPressed()
     {
         if (itemData == null){return;}
-        ItemPurchased?.Invoke(itemData);
+        shopUI.BuyButtonPressed(itemData);
     }
 
     void Start()
