@@ -1,4 +1,4 @@
-<img width="1587" height="887" alt="Screenshot 2026-10-10 030743" src="https://github.com/user-attachments/assets/dbd15457-1541-4084-b921-b4c77d4ace65" />
+<img width="1587" height="893" alt="Screenshot 2026-11-05 145210" src="https://github.com/user-attachments/assets/773dba87-718b-4672-9328-2b44989fb282" />
 
 # Unity UI/UX Tech Demo
 This is a portfolio project made to showcase DOTween UI animations and the MVC architecture. It features a simple title screen and a shop menu.
