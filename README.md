@@ -12,6 +12,7 @@ This is a portfolio project made to showcase DOTween UI animations and the MVC a
 - Bouncy button animations using DOTween.
 - A customizable AutoTweenUIComponent script that automatically animates a UI element as it loads in or when it becomes active.
 - A customizable ContainerAnimation script that automatically animates all child UI elements as it loads in or when it becomes active.
+- A custom scroll view script that uses object pooling for improved performance
 
 ### Project Info
 - This project was made in the Unity Engine and makes use of the DOTween package from the Unity asset store.
